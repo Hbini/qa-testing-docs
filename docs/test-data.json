@@ -1,0 +1,201 @@
+{
+  "testUsers": [
+    {
+      "userId": "USER_001",
+      "username": "standard_user",
+      "password": "secret_sauce",
+      "userType": "Standard User",
+      "email": "standard_user@saucedemo.com",
+      "firstName": "John",
+      "lastName": "Doe",
+      "status": "Active"
+    },
+    {
+      "userId": "USER_002",
+      "username": "locked_out_user",
+      "password": "secret_sauce",
+      "userType": "Locked Out User",
+      "email": "locked_user@saucedemo.com",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "status": "Locked"
+    },
+    {
+      "userId": "USER_003",
+      "username": "problem_user",
+      "password": "secret_sauce",
+      "userType": "Problem User",
+      "email": "problem_user@saucedemo.com",
+      "firstName": "Bob",
+      "lastName": "Johnson",
+      "status": "Active"
+    },
+    {
+      "userId": "USER_004",
+      "username": "performance_glitch_user",
+      "password": "secret_sauce",
+      "userType": "Performance Glitch User",
+      "email": "perf_user@saucedemo.com",
+      "firstName": "Alice",
+      "lastName": "Brown",
+      "status": "Active"
+    }
+  ],
+  "testProducts": [
+    {
+      "productId": "PROD_001",
+      "name": "Sauce Labs Backpack",
+      "price": 29.99,
+      "description": "Carry.allTheThings with the sleek, streamlined Sly Pack that melds uncompromising style with unnoticed utilitarian excellence.",
+      "category": "Backpacks",
+      "inStock": true
+    },
+    {
+      "productId": "PROD_002",
+      "name": "Sauce Labs Bike Light",
+      "price": 9.99,
+      "description": "A red light isn't the desired state in testing but it sure helps when riding your bike at night. All the things. Yay!",
+      "category": "Accessories",
+      "inStock": true
+    },
+    {
+      "productId": "PROD_003",
+      "name": "Sauce Labs Bolt T-Shirt",
+      "price": 15.99,
+      "description": "Get your testing superhero on with the Sauce Labs bolt T-shirt from the front, you'll see a great QA helper at work.",
+      "category": "T-Shirts",
+      "inStock": true
+    },
+    {
+      "productId": "PROD_004",
+      "name": "Sauce Labs Fleece Jacket",
+      "price": 49.99,
+      "description": "It's not just blue, it's state-of-the-art blue. This will help you blend in to your minimalist and totally awesome environment.",
+      "category": "Jackets",
+      "inStock": true
+    },
+    {
+      "productId": "PROD_005",
+      "name": "Sauce Labs Onesie",
+      "price": 7.99,
+      "description": "Uh. I can't really say what you'd wear this for, but it goes with everything.",
+      "category": "Clothing",
+      "inStock": true
+    }
+  ],
+  "testCheckoutData": [
+    {
+      "checkoutId": "CHK_001",
+      "firstName": "John",
+      "lastName": "Doe",
+      "postalCode": "12345",
+      "expectedTotal": "$29.99"
+    },
+    {
+      "checkoutId": "CHK_002",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "postalCode": "54321",
+      "expectedTotal": "$79.96"
+    }
+  ],
+  "testScenarios": [
+    {
+      "scenarioId": "SC_001",
+      "scenarioName": "Successful Login and Browse",
+      "priority": "High",
+      "steps": [
+        "Navigate to https://www.saucedemo.com",
+        "Login with standard_user credentials",
+        "Verify products are displayed",
+        "Logout successfully"
+      ]
+    },
+    {
+      "scenarioId": "SC_002",
+      "scenarioName": "Add Items to Cart and Checkout",
+      "priority": "High",
+      "steps": [
+        "Login with valid credentials",
+        "Add 2 products to cart",
+        "Go to cart page",
+        "Proceed to checkout",
+        "Enter shipping information",
+        "Complete order"
+      ]
+    },
+    {
+      "scenarioId": "SC_003",
+      "scenarioName": "Product Filtering and Sorting",
+      "priority": "Medium",
+      "steps": [
+        "Login to application",
+        "Navigate to products page",
+        "Apply price filter",
+        "Sort by name",
+        "Verify results are correct"
+      ]
+    }
+  ],
+  "bugExamples": [
+    {
+      "bugId": "BUG_001",
+      "title": "Login button unresponsive",
+      "severity": "Critical",
+      "priority": "P0",
+      "stepsToReproduce": [
+        "Open login page",
+        "Enter valid credentials",
+        "Click login button"
+      ],
+      "expectedResult": "User logs in successfully",
+      "actualResult": "Login button does not respond"
+    },
+    {
+      "bugId": "BUG_002",
+      "title": "Cart total calculation incorrect",
+      "severity": "High",
+      "priority": "P1",
+      "stepsToReproduce": [
+        "Add multiple items to cart",
+        "Go to cart page",
+        "Review total price"
+      ],
+      "expectedResult": "Total correctly sums all item prices",
+      "actualResult": "Total shows incorrect sum"
+    }
+  ],
+  "browserConfigurations": [
+    {
+      "browserId": "BROWSER_001",
+      "browserName": "Chrome",
+      "version": "120.0.6099.129",
+      "os": "Windows 11",
+      "resolution": "1920x1080",
+      "supportLevel": "Full"
+    },
+    {
+      "browserId": "BROWSER_002",
+      "browserName": "Firefox",
+      "version": "121.0",
+      "os": "macOS 13.2",
+      "resolution": "2560x1600",
+      "supportLevel": "Full"
+    },
+    {
+      "browserId": "BROWSER_003",
+      "browserName": "Safari",
+      "version": "17.1.2",
+      "os": "macOS 13.2",
+      "resolution": "2560x1600",
+      "supportLevel": "Full"
+    }
+  ],
+  "testMetrics": {
+    "totalTestCases": 8,
+    "criticality": "High",
+    "estimatedDuration": "4 weeks",
+    "resources": 2,
+    "successCriteria": "95% pass rate, all critical bugs fixed"
+  }
+}
